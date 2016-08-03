@@ -1,0 +1,14 @@
+hz:
+  image: 'hazelcast/hazelcast:latest'
+  ports:
+    - '5701:5701'
+  restart: always
+  roles:
+    - global
+  target_num_containers: 1
+management-center:
+  image: 'hazelcast/management-center:latest'
+  ports:
+    - '8080:8080'
+  restart: always
+  target_num_containers: 1
